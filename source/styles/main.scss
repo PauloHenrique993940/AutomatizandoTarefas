@@ -1,0 +1,163 @@
+// Variáveis de cores
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$background-color: #f3f3f3;
+$text-color: #333;
+$card-hover-color: #2980b9;
+$footer-color: #1c1c1c;
+
+// Variáveis de fontes e espaçamento
+$font-family: Arial, sans-serif;
+$font-size-base: 16px;
+$font-size-large: 2rem;
+$font-size-medium: 1.2rem;
+$padding-section: 2rem;
+$border-radius: 8px;
+
+// Estilos globais
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+
+body {
+    background-color: $background-color;
+    color: $text-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+// Header
+.header {
+    width: 100%;
+    background-color: $primary-color;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+
+    h1 {
+        font-size: $font-size-large;
+    }
+
+    .nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+// Seção de Conteúdo (Galeria de Imagens)
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: $padding-section;
+    justify-content: center;
+
+    .image-card {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: $border-radius;
+        overflow: hidden;
+        width: 250px;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+            background-color: $card-hover-color;
+            color: white;
+
+            img {
+                opacity: 0.9;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-top-left-radius: $border-radius;
+            border-top-right-radius: $border-radius;
+        }
+
+        h2 {
+            font-size: $font-size-medium;
+            margin: 0.5rem 0;
+        }
+
+        p {
+            font-size: $font-size-base;
+            padding: 0 1rem 1rem;
+        }
+    }
+}
+
+// Seção Sobre
+.about {
+    background-color: $secondary-color;
+    color: white;
+    padding: $padding-section;
+    text-align: center;
+    width: 100%;
+
+    h2 {
+        font-size: $font-size-large;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: $font-size-medium;
+    }
+}
+
+// Seção Contato
+.contact {
+    background-color: $primary-color;
+    color: white;
+    padding: $padding-section;
+    text-align: center;
+    width: 100%;
+
+    h2 {
+        font-size: $font-size-large;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: $font-size-medium;
+    }
+}
+
+// Rodapé
+.footer {
+    width: 100%;
+    background-color: $footer-color;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+
+    p {
+        font-size: $font-size-base;
+    }
+}
+
